@@ -113,6 +113,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s, opacity 0.2s;
+    margin-bottom: 1rem;
   }
 
   button.copy-btn:hover {
@@ -164,11 +165,15 @@
     <h2>Litecoin (LTC)</h2>
     <p><strong>Bech32:</strong></p>
     <div class="address" id="ltc-b">ltc1qucns0mxrq9csrnejuwek9gcy6tpfv6p2lqe50y</div>
+    <button class="copy-btn" onclick="copyToClipboard('ltc-b', this)">Kopieren</button>
+
     <p><strong>P2SH:</strong></p>
     <div class="address" id="ltc-p">MTbWApX1BNyKxvWoZAQ5RegsuWKW4iZgSZ</div>
+    <button class="copy-btn" onclick="copyToClipboard('ltc-p', this)">Kopieren</button>
+
     <p><strong>Legacy:</strong></p>
     <div class="address" id="ltc-l">LWxFN7T1Tr4ZvvCAGxRwQTPNGvSErz3Lpd</div>
-    <button class="copy-btn" onclick="copyToClipboard('ltc-b', this)">Kopieren</button>
+    <button class="copy-btn" onclick="copyToClipboard('ltc-l', this)">Kopieren</button>
   </div>
 
   <div class="card">
@@ -187,11 +192,15 @@
     <h2>Bitcoin (BTC)</h2>
     <p><strong>Bech32:</strong></p>
     <div class="address" id="btc-b">bc1qypyp062dcpmx7ajwm4rwshasfna9lvg9u87k7l</div>
+    <button class="copy-btn" onclick="copyToClipboard('btc-b', this)">Kopieren</button>
+
     <p><strong>P2SH:</strong></p>
     <div class="address" id="btc-p">38oy7SeeZdAS6xKpLkJpFXyLNZChCrtk21</div>
+    <button class="copy-btn" onclick="copyToClipboard('btc-p', this)">Kopieren</button>
+
     <p><strong>Legacy:</strong></p>
     <div class="address" id="btc-l">1KkSN1KNudcjmAhVajjJHA1U4magUdb2FP</div>
-    <button class="copy-btn" onclick="copyToClipboard('btc-b', this)">Kopieren</button>
+    <button class="copy-btn" onclick="copyToClipboard('btc-l', this)">Kopieren</button>
   </div>
 
   <div class="card">
