@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyberton – Startseite</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0f;
+    --card: #1a1b22;
+    --accent: #00ffff;
+    --accent2: #0077ff;
+    --text: #f5f5f5;
+    --muted: #aaaaaa;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle at 50% 20%, rgba(0,255,255,0.15), transparent 60%);
+  }
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin: 0;
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--accent2);
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  nav a:hover {
+    color: var(--accent2);
+  }
+  header p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+    border-color: var(--accent2);
+  }
+  .card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    background: linear-gradient(to top, rgba(255,255,255,0.05), transparent);
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cyberton</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">Über uns</a>
+    <a href="products.html">Produkte</a>
+    <a href="spend.html">Spenden</a>
+  </nav>
+  <p>Willkommen auf der offiziellen Seite unserer kostenlosen Software-Projekte!</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Unsere Mission</h2>
+    <p>Cyberton entwickelt kostenlose Software für die Community. Unterstütze uns freiwillig mit Kryptowährungen!</p>
+  </div>
+  <div class="card">
+    <h2>Downloads</h2>
+    <p>Du kannst unsere Software auf GitHub herunterladen:</p>
+    <ul>
+      <li><a href="https://github.com/CYBERT0N/web/releases" target="_blank">GitHub Releases</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Kontakt & Info</h2>
+    <p>Schreibe uns bei Fragen oder besuche unsere About-Seite, um mehr über das Projekt zu erfahren.</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 Cyberton – Zukunft entsteht durch Visionen.
+</footer>
+
+</body>
+</html>

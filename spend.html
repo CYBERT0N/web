@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyberton – Spenden</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0f;
+    --card: #1a1b22;
+    --accent: #00ffff;
+    --accent2: #0077ff;
+    --text: #f5f5f5;
+    --muted: #aaaaaa;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: radial-gradient(circle at 50% 20%, rgba(0,255,255,0.12), transparent 70%);
+  }
+
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--accent2);
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--accent2); }
+
+  header p {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+    border-color: var(--accent2);
+  }
+
+  .card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+
+  .address {
+    font-family: monospace;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    word-break: break-all;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+
+  button.copy-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  button.copy-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+  .copied {
+    color: #0f0;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    background: linear-gradient(to top, rgba(255,255,255,0.05), transparent);
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cyberton</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">Über uns</a>
+    <a href="products.html">Produkte</a>
+    <a href="spend.html">Spenden</a>
+  </nav>
+  <p>Unterstütze unsere Projekte freiwillig mit Kryptowährungen.</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Monero (XMR)</h2>
+    <div class="address" id="xmr">42V1ceVaGcWg6ouxPFmdhs6VxLFvo2QjAZQM2Jmi2tK7XjkGPJ5ezSEgqJKsdF2kbQbvYAe8mukBZVFT3BHoxdWnLS1agsE</div>
+    <button class="copy-btn" onclick="copyToClipboard('xmr', this)">Kopieren</button>
+  </div>
+
+  <div class="card">
+    <h2>Litecoin (LTC)</h2>
+    <p><strong>Bech32:</strong></p>
+    <div class="address" id="ltc-b">ltc1qucns0mxrq9csrnejuwek9gcy6tpfv6p2lqe50y</div>
+    <p><strong>P2SH:</strong></p>
+    <div class="address" id="ltc-p">MTbWApX1BNyKxvWoZAQ5RegsuWKW4iZgSZ</div>
+    <p><strong>Legacy:</strong></p>
+    <div class="address" id="ltc-l">LWxFN7T1Tr4ZvvCAGxRwQTPNGvSErz3Lpd</div>
+    <button class="copy-btn" onclick="copyToClipboard('ltc-b', this)">Kopieren</button>
+  </div>
+
+  <div class="card">
+    <h2>Solana (SOL)</h2>
+    <div class="address" id="sol">B6U28WzDYbKjc867SWQXvCudD9ncGHMdgm3CfezY52md</div>
+    <button class="copy-btn" onclick="copyToClipboard('sol', this)">Kopieren</button>
+  </div>
+
+  <div class="card">
+    <h2>Ethereum Classic (ETC)</h2>
+    <div class="address" id="etc">0x437412175956000e45e3f6aAfc8191eCb51a9CE2</div>
+    <button class="copy-btn" onclick="copyToClipboard('etc', this)">Kopieren</button>
+  </div>
+
+  <div class="card">
+    <h2>Bitcoin (BTC)</h2>
+    <p><strong>Bech32:</strong></p>
+    <div class="address" id="btc-b">bc1qypyp062dcpmx7ajwm4rwshasfna9lvg9u87k7l</div>
+    <p><strong>P2SH:</strong></p>
+    <div class="address" id="btc-p">38oy7SeeZdAS6xKpLkJpFXyLNZChCrtk21</div>
+    <p><strong>Legacy:</strong></p>
+    <div class="address" id="btc-l">1KkSN1KNudcjmAhVajjJHA1U4magUdb2FP</div>
+    <button class="copy-btn" onclick="copyToClipboard('btc-b', this)">Kopieren</button>
+  </div>
+
+  <div class="card">
+    <h2>Ethereum (ETH)</h2>
+    <div class="address" id="eth">0x8E6aB357B62469190C680BbA2eE75Ee6A30D29E9</div>
+    <button class="copy-btn" onclick="copyToClipboard('eth', this)">Kopieren</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Cyberton – Zukunft entsteht durch Visionen.
+</footer>
+
+<script>
+function copyToClipboard(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const span = document.createElement('span');
+    span.className = 'copied';
+    span.textContent = '✔ Kopiert!';
+    btn.insertAdjacentElement('afterend', span);
+    setTimeout(() => span.remove(), 1500);
+  });
+}
+</script>
+
+</body>
+</html>
