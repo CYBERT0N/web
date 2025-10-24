@@ -1,8 +1,8 @@
 [
   {
     "name": "File-Splitter 1.0",
-    "download": "File-Splitter.py",
-    "img": "File-Splitter.png",
+    "download": "downloads/File-Splitter.py",
+    "img": "img/File-Splitter.png",
     "desc": "File-Splitter.txt"
   }
 ]
